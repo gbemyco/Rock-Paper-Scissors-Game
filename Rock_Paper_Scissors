@@ -1,0 +1,55 @@
+import random
+print('Welcome to the Rock-Paper-Scissors Game!')
+print('Game Tips:')
+print('Rock beats Scissors')
+print('Paper beats Rock')
+print('Scissors beats Paper')
+print("if the CPU and player choose the same item, it's a tie")
+print('R = Rock, P= Paper, S= Scissors')
+print(f'\n')
+print('START GAME NOW! ')
+print('Note: Input letters are not case sensitive!')
+
+player_choices= ['R', 'P', 'S']
+while True:
+    user_input = input('Pick an option between "R", "P" or "S": ').upper()
+    if user_input not in player_choices:
+        print('Invalid input! Try again')
+    else:
+        pass
+
+        User = ''
+        if user_input == 'R':
+            User = 'Rock'
+        elif user_input == 'P':
+            User = 'Paper'
+        elif user_input == 'S':
+            User = 'Scissors'
+        computer_choices = ['Rock', 'Paper', 'Scissors']
+        random_choices = random.choice(computer_choices)
+        print('Computer choice is:', random_choices)
+        print('Player', '(', User, ')', ':', ' CPU', '(', random_choices, ')')
+        if random_choices == 'Rock' and user_input == 'S':
+            print('Computer Wins!')
+            break
+        elif random_choices == 'Rock' and user_input == 'P':
+            print('Congratulations! You win!!')
+            break
+        elif random_choices == 'Paper' and user_input == 'R':
+            print('Computer Wins!')
+            break
+        elif random_choices == 'Paper' and user_input == 'S':
+            print('Congratulations! You win!!')
+            break
+        elif random_choices == 'Scissors' and user_input == 'R':
+          print('Congratulations! You win!!')
+          break
+        elif random_choices == 'Scissors' and user_input == 'P':
+            print('Computer Wins!')
+            break
+        else:
+            random_choices == user_input
+            print ('No winner, Try again!')
+
+print(f'...........................\n')
+print('Thanks for playing!')
